@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(./study-notebooks.jpg) no-repeat center center/ cover;
+}
+
+.container {
+    width: max(380px, 60%);
+    min-height: 80px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#input {
+    flex: 5;
+    margin: 0 8px;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+#add-button {
+    flex: 1;
+    margin: 0 8px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+    font-size: 1.6rem;
+    padding-top: 2px;
+    transition: .3s;
+}
+
+#add-button:hover {
+    color: #fff;
+    background-color: green;
+    cursor: pointer;
+}
+
+.task-container {
+    width: max(380px, 60%);
+    overflow: scroll;
+    padding: 10px;
+}
+
+.task {
+    width: 100%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    margin-bottom: 10px;
+}
+
+.task li {
+    list-style: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    flex: 4;
+    margin: 5px;
+}
+
+.task .done {
+    flex: 1;
+    background-color: #fff;
+    font-size: 1.6rem;
+    border-radius: 15px;
+    margin-right: 5px;
+    color: orange;
+    border: 2px solid orange;
+    padding-top: 2px;
+    transition: .3s;
+}
+.task .done:hover {
+    color: #fff;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.task .delete {
+    flex: 1;
+    background-color: #fff;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    margin-left: 5px;
+    color: red;
+    border: 2px solid red;
+    transition: .3s;
+}
+.task .delete:hover {
+    color: #fff;
+    background-color: red;
+    cursor: pointer;
+    text-decoration: line-through;
+}
