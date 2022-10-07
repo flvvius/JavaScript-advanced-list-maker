@@ -2,12 +2,17 @@ const addBtn = document.querySelector("#add-button")
 const inputElem = document.querySelector("#input")
 const taskContainer = document.querySelector(".task-container")
 
+
 inputElem.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault()
         addBtn.click()
     }
 })
+
+
+inputElem.focus()
+
 
 addBtn.addEventListener("click", function() {
 
@@ -38,12 +43,17 @@ addBtn.addEventListener("click", function() {
     inputElem.focus()
 
     doneBtn.addEventListener("click", function() {
+
         doneBtn.parentElement.style.textDecoration = "line-through"
         inputElem.focus()
+
     })
 
     deleteBtn.addEventListener("click", function() {
+
         task.remove()
         inputElem.focus()
+        
     })
+
 })
